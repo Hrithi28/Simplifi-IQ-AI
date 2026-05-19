@@ -1,0 +1,6 @@
+.env
+credentials.json
+**pycache**/
+node_modules/
+reports/
+*.pyc
