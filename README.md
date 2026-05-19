@@ -16,7 +16,7 @@ Flask Backend (app.py)
       ├─→ enrichment.py
       │       ├─ Scrape company website (homepage + about + services)
       │       ├─ DuckDuckGo Instant Answers API
-      │       └─ Claude AI synthesis → structured JSON profile
+      │       └─ Gemini AI synthesis → structured JSON profile
       │
       ├─→ report_generator.py
       │       └─ ReportLab → 4-page professional PDF
@@ -137,7 +137,7 @@ Health check endpoint.
 ### Enrichment Strategy
 - **Website scraping** (BeautifulSoup): Primary data source. Handles missing/incomplete pages gracefully.
 - **DuckDuckGo Instant Answers**: Free API, no key required, good for company overviews.
-- **Claude AI synthesis**: Converts raw scraped text into a structured 15-field JSON profile. Falls back to rule-based heuristics if API key is not set.
+- **Gemini AI synthesis**: Converts raw scraped text into a structured 15-field JSON profile. Falls back to rule-based heuristics if API key is not set.
 
 ### PDF Generation
 - **ReportLab** (Python): Chosen over wkhtmltopdf/puppeteer for pure-Python portability, no browser dependency, and precise layout control. Dark theme with brand colors rendered as custom `Flowable` components.
